@@ -9,12 +9,12 @@ const pipeline = promisify(stream.pipeline)
 async function upload(options = {}) {
   const search = new URLSearchParams(options)
 
-  await pipeline(
+  const response = await pipeline(
     fs.createReadStream('example.zip'),
     got.stream.post(`http://localhost:7600/receive?${search.toString()}`),
     new stream.PassThrough(),
   )
-  console.log('loaded file')
+  console.log('upload response', response)
 }
 upload({ width: 100, height: 200, elementSelector: '.foo' }).then(
   console.log,
