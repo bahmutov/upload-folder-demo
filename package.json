@@ -14,7 +14,8 @@
   "description": "",
   "dependencies": {
     "archiver": "^5.3.0",
-    "got": "^11.8.2"
+    "got": "^11.8.2",
+    "to-query": "^1.6.1"
   },
   "devDependencies": {
     "micro": "^9.3.4",
