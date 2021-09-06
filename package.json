@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server",
+    "dev": "micro-dev",
+    "zip": "node ./zip"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +16,8 @@
     "archiver": "^5.3.0"
   },
   "devDependencies": {
+    "micro": "^9.3.4",
+    "micro-dev": "^3.0.0",
     "prettier": "^2.3.2"
   }
 }
