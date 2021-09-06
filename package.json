@@ -2,6 +2,7 @@
   "name": "upload-folder-demo",
   "version": "1.0.0",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./server",
@@ -11,7 +12,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Node example zipping and uploading the entire folder",
   "dependencies": {
     "archiver": "^5.3.0",
     "got": "^11.8.2",
