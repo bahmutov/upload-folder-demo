@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 const archiver = require('archiver')
 
-function ZipFolder(folderName) {
+function zipFolder(folderName) {
   console.log('Zipping folder %s', folderName)
   return new Promise((resolve, reject) => {
     // create a file to stream archive data to.
@@ -55,5 +55,5 @@ function ZipFolder(folderName) {
 }
 
 if (!module.parent) {
-  ZipFolder('test-folder').then(console.log, console.error)
+  zipFolder('test-folder').then(console.log, console.error)
 }
