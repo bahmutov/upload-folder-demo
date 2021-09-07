@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./server",
-    "dev": "micro-dev -p 7600",
+    "dev": "micro-dev -p 7600 --watch server ./server",
     "zip": "node ./zip"
   },
   "keywords": [],
@@ -15,6 +15,7 @@
   "description": "Node example zipping and uploading the entire folder",
   "dependencies": {
     "archiver": "^5.3.0",
+    "del": "^6.0.0",
     "got": "^11.8.2",
     "to-query": "^1.6.1",
     "unzipper": "^0.10.11"

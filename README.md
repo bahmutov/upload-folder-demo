@@ -7,3 +7,7 @@
 $ npm ./zip
 # creates example.zip
 ```
+
+## Uploads
+
+We perform uploads using [got](https://github.com/sindresorhus/got#readme) in the streaming mode.
