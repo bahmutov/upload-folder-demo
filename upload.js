@@ -35,9 +35,11 @@ async function upload(options = {}) {
     stream.pipeline(
       fs.createReadStream('example.zip'),
       got.stream.post(`http://localhost:7600/receive?${search.toString()}`),
+      // new stream.PassThrough(),
       fs.createWriteStream('result.json'),
       (err) => {
         if (err) {
+          console.log('Problem:', err.message)
           return reject(err)
         }
         console.log('posted')
