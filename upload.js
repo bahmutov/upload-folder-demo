@@ -35,6 +35,7 @@ async function upload(options = {}) {
     stream.pipeline(
       fs.createReadStream('example.zip'),
       got.stream.post(`http://localhost:7600/receive?${search.toString()}`),
+      fs.createWriteStream('result.json'),
       (err) => {
         if (err) {
           return reject(err)
